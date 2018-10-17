@@ -19,6 +19,8 @@ $ composer install
 
 ## Running
 
+To run this project, follow next steps.
+
 ### Connect database
 
 To connect on database, make new .env file. Copy the content of .env.example file
