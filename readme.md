@@ -1,6 +1,6 @@
-# Back-end
+# Kanban board back-end
 
-This is back-end for kanbon-board application. For creating this, next technologies are used:
+This is back-end for kanban board application. For creating this, next technologies are used:
 * PHP
 * Laravel
 * MySQL
