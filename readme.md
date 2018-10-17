@@ -19,7 +19,7 @@ $ composer install
 
 ## Running
 
-To run this project, follow next steps.
+To run this project, follow the steps below.
 
 ### Connect database
 
