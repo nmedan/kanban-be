@@ -8,9 +8,8 @@ This is back-end for kanban board application. For creating this, next technolog
 ## Installation
 
 ### Requirements
-* Laravel >=5.6 or more
-* MySQL Client >=5.7
-* Windows or Linux
+* Laravel
+* MySQL Client
 
 ### Install composer
 To install composer, go to project directory in command line and type:
