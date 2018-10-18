@@ -29,9 +29,10 @@ class ColumnsController extends Controller
             $column->update([
                 'capacity' => $request->capacity
             ]);
+            return $column;
         }
         else {
-            response()->json(['error' => 'Request failed with status code 422'], 422);
+            return response()->json(['error' => 'Request failed with status code 422'], 422);
         }
     }
 

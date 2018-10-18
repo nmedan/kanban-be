@@ -18,23 +18,23 @@ class CardsController extends Controller
             $card = Card::create([
                 'column_id' => $id
             ]);
+            return $card;
         }
         else {
-            response()->json(['error' => 'Request failed with status code 422'], 422);
+            return response()->json(['error' => 'Request failed with status code 422'], 422);
         }
     }
 
     public function changeColumn($id, $toId) {
-        $card = Card::find($id);
-        $column = Column::find($toId);
+        $card = Card::findOrFail($id);
+        $column = Column::findOrFail($toId);
         if (($column->capacity > sizeof($column->cards)) || $column->capacity==null) {
-            $card->update([
-               'column_id' => $column->id
-            ]);
+            $card->column_id = $column->id;
+            $card->save();
+            return $card;
         }
         else {
-            response()->json(['error' => 'Request failed with status code 422'], 422);
-        }
-        return $card;
+            return response()->json(['error' => 'Request failed with status code 422'], 422);
+        }       
     }
 }
